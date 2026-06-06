@@ -25,9 +25,39 @@ function addTask() {
 
     input.value = ""; 
 
-    span.addEventListener("click", function () {
-        li.remove(); 
+    span.addEventListener("click", function (e) {
+        e.stopPropagation(); // delete click complete na banaye
+        li.remove();
+        saveTasks();
+
     });
+
+    li.addEventListener("click", function () {
+        li.classList.toggle("completed");
+        saveTasks();
+    });
+
+
+    saveTasks();
 }
+
+
+function saveTasks() {
+    const tasks = document.getElementById("taskList").innerHTML;
+    localStorage.setItem("tasks", tasks);
+}
+
+
+function loadTasks() {
+    const tasks = localStorage.getItem("tasks");
+    if (tasks) {
+        document.getElementById("taskList").innerHTML = tasks;
+    }
+}
+
+
+loadTasks();
+
+
 
 
