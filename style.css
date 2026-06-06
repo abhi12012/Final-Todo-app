@@ -72,3 +72,13 @@ ul li span {
     text-decoration: line-through;
     color: gray;
 }
+
+button:last-child {
+    background: red;
+    margin-top: 10px;
+}
+
+
+button:last-child:hover {
+    background: darkred;
+}

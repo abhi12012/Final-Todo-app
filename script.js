@@ -82,8 +82,18 @@ function loadTasks() {
 }
 
 
+
 loadTasks();
 
 
+function clearAll() {
+    const list = document.getElementById("taskList");
+
+
+    if (confirm("Are you sure you want to delete all tasks?")) {
+        list.innerHTML = "";
+        localStorage.removeItem("tasks");
+    }
+}
 
 
