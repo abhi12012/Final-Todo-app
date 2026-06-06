@@ -18,12 +18,22 @@ function addTask() {
     span.style.color = "red";
     span.style.float = "right"; 
 
+    const editSpan = document.createElement("span");
+    editSpan.textContent = "✏️";
+    editSpan.style.cursor = "pointer";
+    editSpan.style.marginRight = "10px";
+    editSpan.style.float = "right";
+
+
     li.appendChild(span);
+    li.appendChild(editSpan);
 
     document.getElementById("taskList").appendChild(li);
 
 
     input.value = ""; 
+
+
 
     span.addEventListener("click", function (e) {
         e.stopPropagation(); // delete click complete na banaye
@@ -31,6 +41,22 @@ function addTask() {
         saveTasks();
 
     });
+
+
+
+    editSpan.addEventListener("click", function (e) {
+    e.stopPropagation(); // complete toggle na ho
+
+
+    let newText = prompt("Edit your task:", li.firstChild.textContent.trim());
+
+
+    if (newText !== null && newText !== "") {
+        li.firstChild.textContent = newText + " ";
+        saveTasks();
+    }
+});
+
 
     li.addEventListener("click", function () {
         li.classList.toggle("completed");
