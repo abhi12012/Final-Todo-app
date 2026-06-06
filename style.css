@@ -17,11 +17,10 @@ body {
 
 .container {
     background: white;
-    width: 350px;
-    padding: 20px;
+    width: 450px;   /* पहले 350px था */
+    padding: 25px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
-     text-align: center;
 }
 
 
@@ -31,11 +30,20 @@ h1 {
 }
 
 
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
 .input-box {
     display: flex;
+    flex-direction: column;
     gap: 10px;
-    margin-bottom: 15px;
 }
+
 
 
 button {
@@ -97,3 +105,14 @@ button:last-child:hover {
     padding: 5px;
     font-size: 14px;
 }
+
+
+#searchInput {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+

@@ -96,6 +96,15 @@ function clearAll() {
     }
 }
 
+
+function showAll() {
+    const tasks = document.querySelectorAll("#taskList li");
+    tasks.forEach(function (li) {
+        li.style.display = "block";
+    });
+}
+
+
 function showCompleted() {
     const tasks = document.querySelectorAll("#taskList li");
     tasks.forEach(function (li) {
@@ -131,6 +140,25 @@ function showPending() {
     });
 }
 
+function saveTasks() {
+    const tasks = document.getElementById("taskList").innerHTML;
+    localStorage.setItem("tasks", tasks);
+}
 
+
+function searchTask() {
+    const searchValue = document.getElementById("searchInput").value.toLowerCase();
+    const tasks = document.querySelectorAll("#taskList li");
+
+    tasks.forEach(function (li) {
+        const text = li.textContent.toLowerCase();
+
+        if (text.includes(searchValue)) {
+            li.style.display = "block";
+        } else {
+            li.style.display = "none";
+        }
+    });
+}
 
 
