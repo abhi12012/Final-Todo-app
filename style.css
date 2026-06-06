@@ -60,3 +60,9 @@ ul li {
     padding: 10px;
     border-radius: 5px;
 }
+
+ul li span {
+    float: right;
+    cursor: pointer;
+    color: red;
+}
