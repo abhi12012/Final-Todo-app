@@ -96,4 +96,41 @@ function clearAll() {
     }
 }
 
+function showCompleted() {
+    const tasks = document.querySelectorAll("#taskList li");
+    tasks.forEach(function (li) {
+        if (li.classList.contains("completed")) {
+            li.style.display = "block";
+        } else {
+            li.style.display = "none";
+        }
+    });
+}
+
+
+function showCompleted() {
+    const tasks = document.querySelectorAll("#taskList li");
+    tasks.forEach(function (li) {
+        if (li.classList.contains("completed")) {
+            li.style.display = "block";
+        } else {
+            li.style.display = "none";
+        }
+    });
+}
+
+
+function showPending() {
+    const tasks = document.querySelectorAll("#taskList li");
+    tasks.forEach(function (li) {
+        if (!li.classList.contains("completed")) {
+            li.style.display = "block";
+        } else {
+            li.style.display = "none";
+        }
+    });
+}
+
+
+
 
