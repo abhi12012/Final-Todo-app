@@ -15,9 +15,6 @@ This project helps users manage daily tasks efficiently with features like edit,
 
 ![Advanced Todo App](screenshot.png)
 
-## 📸 Screenshot
-
-![Advanced Todo App](screenshot.png)
 
 ## 🔥 Features
 
