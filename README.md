@@ -5,6 +5,20 @@ This project helps users manage daily tasks efficiently with features like edit,
 
 ---
 
+## 🚀 Live Demo
+
+[View Todo App](https://abhi12012.github.io/Final-Todo-app/)
+---
+
+
+## 📸 Screenshot
+
+![Advanced Todo App](screenshot.png)
+
+## 📸 Screenshot
+
+![Advanced Todo App](screenshot.png)
+
 ## 🔥 Features
 
 - ➕ Add new tasks
